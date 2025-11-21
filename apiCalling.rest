@@ -1,0 +1,109 @@
+#=============================================authRoute=============================================
+
+### SIGNUP
+POST http://localhost:5000/api/auth/signup
+Content-Type: application/json
+
+{
+    "userName" : "masha_m",
+    "fullName" : "Masha and the Bear",
+    "email"    : "masha@gmail.com",
+    "password" : "masha123"
+}
+
+### LOGIN
+POST http://localhost:5000/api/auth/login 
+Content-Type: application/json
+
+{
+    "userName" : "ava_001",
+    "password" : "avareed123"
+}
+
+### USER PROFILE
+GET http://localhost:5000/api/auth/me
+
+### LOGOUT 
+POST http://localhost:5000/api/auth/logout
+
+#=============================================userRoute=============================================
+
+### SEARCH USER
+GET http://localhost:5000/api/user/profile/donmass007
+
+### SUGGESTED USERS 
+GET http://localhost:5000/api/user/suggestions
+
+### FOLLOWUNFOLLOW
+POST http://localhost:5000/api/user/followunfollow/68ccf390369e5a9da1c45824
+
+### UPDATE PROFILE 
+POST http://localhost:5000/api/user/updateprofile
+Content-Type: application/json
+
+{
+  "userName": "donmass007",
+  "fullName": "Giridhar R S",
+  "bio": "Basically i am a Don🔥",
+  "links": "donmass.in"
+}
+
+#==============================================postRoute=============================================
+
+### CREATE POST
+POST http://localhost:5000/api/post/create
+Content-Type: application/json
+
+{
+  "caption" : "Hi i am rohan"
+}
+
+### VIEW POSTS
+GET http://localhost:5000/api/post/viewallposts
+
+### FOLLOWING USERS POSTS 
+GET http://localhost:5000/api/post/followingusersposts
+
+### SEE USER'S POSTS
+GET http://localhost:5000/api/post/usersposts/ava_001
+
+### ME LIKED POSTS
+GET http://localhost:5000/api/post/userlikedposts/6917fbdcc1d0017dfab1d951
+
+### EDIT POST
+PUT http://localhost:5000/api/post/edit/68cd437b4a90605c96e9d696
+Content-Type: application/json
+
+{
+  "caption" : "Here is my new Game 🕹🎲"
+}
+
+### DELETE POST
+DELETE http://localhost:5000/api/post/691beacdbc3a067f648bafac
+
+### LIKE | UNLIKE POST
+POST http://localhost:5000/api/post/likeunlike/68cd434d4a90605c96e9d68d
+
+### COMMENT POST
+POST http://localhost:5000/api/post/comment/68cd437b4a90605c96e9d696
+Content-Type: application/json
+
+{
+  "comment" : "Nice game broo..."
+}
+
+### DELETE COMMENT
+DELETE http://localhost:5000/api/post/delcomment/68ccfb561598d15e4e41baa7/68cd2fb1e129e687b9c9680f
+
+
+#=========================================notificationRoute=========================================
+
+### NOTIFICATION ROUTE 
+GET http://localhost:5000/api/notifications/mynotis
+
+### DELETE NOTIFICATION
+DELETE http://localhost:5000/api/notifications/deleteone/68cd43d44a90605c96e9d6b2
+
+### DELETE ALL NOTIFICATIONS
+DELETE http://localhost:5000/api/notifications/deleteallnotis
+
