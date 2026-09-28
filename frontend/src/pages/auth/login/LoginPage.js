@@ -99,7 +99,7 @@ const LoginPage = () => {
 						/>
 					</label>
 					<button className='btn rounded-full btn-primary text-white'>
-                        {!isPending && "Login in"}
+                        {!isPending && "Login"}
                         {isPending && <LoadingSpinner/>}
                     </button>
 					{isError && <p className='text-red-500'>{error.message}</p>}
